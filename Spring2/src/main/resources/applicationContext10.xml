@@ -1,0 +1,13 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="studentRepository" class="com.example.di_xml_configuration.sample2.repository.HibernateStudentRepositoryImpl"></bean>
+    <bean id="studentService" class="com.example.di_xml_configuration.sample2.service.StudentServiceImpl">
+        <property name="studentRepo"><ref bean="studentRepository"></ref></property>
+    </bean>
+
+</beans>

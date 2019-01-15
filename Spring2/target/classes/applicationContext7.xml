@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="student1" class="com.example.di_xml_configuration.di.setter_injection._7_list.Student">
+        <property name="id" value="1"></property>
+        <property name="name" value="name1"></property>
+        <property name="address" value="address1"></property>
+    </bean>
+
+    <bean id="student2" class="com.example.di_xml_configuration.di.setter_injection._7_list.Student">
+        <property name="id" value="2"></property>
+        <property name="name" value="name2"></property>
+        <property name="address" value="address2"></property>
+    </bean>
+
+    <bean id="course" class="com.example.di_xml_configuration.di.setter_injection._7_list.Course">
+        <property name="id" value="1"></property>
+        <property name="name" value="name1"></property>
+        <property name="students">
+            <list>
+                <ref bean="student1"></ref>
+                <ref bean="student2"></ref>
+            </list>
+        </property>
+    </bean>
+
+</beans>

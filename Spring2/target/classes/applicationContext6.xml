@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="address" class="com.example.di_xml_configuration.di.setter_injection._6_dependent_object.Address">
+        <property name="addressLine" value="7279 Henry Smith Street"></property>
+        <property name="city" value="Seattle"></property>
+        <property name="state" value="Washington"></property>
+        <property name="country" value="USA"></property>
+    </bean>
+
+    <bean id="student" class="com.example.di_xml_configuration.di.setter_injection._6_dependent_object.Student">
+        <property name="id" value="1"></property>
+        <property name="name" value="name1"></property>
+        <property name="address"><ref bean="address"></ref></property>
+    </bean>
+
+</beans>
